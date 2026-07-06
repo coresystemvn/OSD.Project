@@ -1,6 +1,6 @@
 ==== CORESYTEM | Advanced Windows Deployment System ====
 
-### Folder structure
+### Folder structure [cấu trúc thư mục]
 
 X:\SetupFiles [3 files]
 
@@ -24,7 +24,7 @@ X:\Software [4 sub folders]
 
 X:\Program Files\WindowsPowerShell\Modules\OSDCloud\26.6.29.1 [OSDCloud modified version]
 
-### Usage
+### Usage [Sử dụng]
 
 #### System info
 
@@ -53,7 +53,7 @@ System rescue tools to check detailed system information (HWInfo64), backup data
 - Rufus can format boot drive with NTFS option. Otherwise, an additional drive to store local .esd files is required
 - To download .esd files. We need dl-win-esd.sh [tool]
 
-#### Next-gen version 
+#### Next-gen version [bản đầy đủ hơn nâng cấp UI/UX]
 
 coresystem-ng.ps1
 
