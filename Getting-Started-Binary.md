@@ -24,7 +24,7 @@
 
 Tải file binary self-contained (~128MB) từ link bên dưới:
 
-[Tải về](link-to-github-releases)
+[Tải về](https://github.com/coresystemvn/OSD.Project/releases)
 
 ---
 
@@ -251,7 +251,7 @@ Nếu muốn tùy chỉnh sâu, hãy dùng **Phiên bản PowerShell**.
 
 Download the self-contained binary file (~128MB) from the link below:
 
-[Download](link-to-github-releases)
+[Download](https://github.com/coresystemvn/OSD.Project/releases)
 
 ---
 
