@@ -1,18 +1,92 @@
-### OSD Project by CORESYSTEM
+# OSD Project - Advanced Windows Deployment System
+
+---
+
+## Introduction
+
+OSD project by CoreSystem is an advanced Windows deployment system built on OSDeploy/OSDCloud. It streamlines Windows installation to be fast, secure, and enterprise-ready.
+
+---
 
 ## Objectives
 
-- Always deploy from **clean, official Microsoft sources** with the latest updates.
-- Total installation time wrapped up **within 30-45 minutes** (depending on Internet bandwidth).
-- **Enterprise-ready** automation customization: Bloatware removal out-of-the-box, alongside pre-installing essential office applications.
-- **Maximum compatibility with modern hardware security standards** as vendors tighten enforcement on UEFI firmware, SecureBoot, and TPM 2.0 chips.
-- Beyond its primary deployment capabilities, the boot system integrates essential utilities for hardware diagnostics, partition management, and disk backup, ensuring a safe and reliable setup process.
-- **100% compliant**: The system does not utilize any commercial software that could potentially trigger corporate licensing or legal disputes.
-- Suited for a **wide range of hardware** from vendors like HP, Dell, Lenovo...
+- **Clean Sources:** Always deploy from official Microsoft sources with latest updates
+- **Speed:** Save several hours per machine compared to typical installation processes
+  - Flow 2 (Business Tweaks): 13-15 minutes
+  - Flow 3 (Tweaks + Apps): 20-25 minutes
+  - Depends on network speed and number of applications to install
+- **Maximum Security:** Uses original Microsoft WinPE, 100% compatible with latest security standards (SecureBoot, TPM 2.0)
+- **Enterprise Customization:** Bloatware removal, pre-installing essential office apps
+- **Integrated Tools:** Hardware diagnostics, partition management, disk backup
+- **100% Legal:** No paid software used
+- **Wide Hardware Support:** HP, Dell, Lenovo and many more
 
-This version focuses on maximizing workflow efficiency for businesses by restructuring deploy workflows, re-choosing proper tools, creating new business logic for faster system provisioning process with wifi, bitlocker functions and hotkeys as well
+---
 
 ## Screenshot
 
-![Bootscreen](Misc/main.png)
+![Bootscreen](./Misc/main.png)
 
+---
+
+## Quick Start
+
+Choose the version that fits your needs:
+
+| Version | Target Audience | Description |
+|---------|-----------------|-------------|
+| **[Binary](./Getting-Started-Binary.md)** | IT Technicians | Self-contained file (~128MB), quick deployment |
+| **[PowerShell](./Getting-Started-PS.md)** | IT Enthusiasts | Open source, fully customizable |
+
+---
+
+## Project Structure
+
+```
+OSD.Project/
+├── Resources/
+│   ├── coresystem-ng.ps1           # Main file (PowerShell)
+│   ├── SetupFiles/                 # Configuration files
+│   │   ├── unattend.xml
+│   │   ├── post-setup-tweaks.ps1
+│   │   └── post-setup-combo.ps1
+│   └── Next-Step/
+│       ├── next-step-tweaks.ps1
+│       └── next-step-combo.ps1
+├── Misc/
+├── README.md
+├── README.en.md
+├── LICENSE
+├── DISCLAIMER.md
+├── Getting-Started-Binary.md
+├── Getting-Started-PS.md
+└── advanced-topics.md
+```
+
+---
+
+## Version Comparison
+
+| Component | Binary | PowerShell |
+|-----------|--------|------------|
+| **Target** | IT Technicians | IT Enthusiasts |
+| **Main File** | coresystem.exe | coresystem-ng.ps1 |
+| **Launcher** | winpeshl.ini | startnet.cmd |
+| **ISO Size** | ~1.3GB | ~1.1GB |
+| **Customization** | Limited | Unlimited |
+
+---
+
+## Documentation
+
+- **[Getting Started (Binary)](./Getting-Started-Binary.md)** - For IT technicians
+- **[Getting Started (PowerShell)](./Getting-Started-PS.md)** - For IT enthusiasts
+- **[Advanced Topics](./advanced-topics.md)** - Deep-dive documentation
+
+---
+
+## Contact
+
+- **Website:** https://osd.coresystem.vn
+- **GitHub:** https://github.com/coresystemvn/OSD.Project
+- **Release:** https://github.com/coresystemvn/OSD.Project/releases

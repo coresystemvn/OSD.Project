@@ -127,14 +127,14 @@ catch {
 }
 
 # ------------------------------------------------------------------------------
-# 3. TAO FILE GHI CHU (NOTES.TXT) TU GITHUB
+# 3. TAO FILE GHI CHU (NOTES.TXT) TU CORESYSTEM
 # ------------------------------------------------------------------------------
-Write-Host "`n[3/7] Dang dong bo file Notes.txt tu GitHub ra Desktop..." -ForegroundColor Yellow
+Write-Host "`n[3/7] Dang dong bo file Notes.txt tu CoreSystem ra Desktop..." -ForegroundColor Yellow
 
 try {
     $CurrentDesktop = [Environment]::GetFolderPath("Desktop")
     $NotePath = "$CurrentDesktop\Notes.txt"
-    $NotesUrl = "https://raw.githubusercontent.com/coresystemvn/OSDCloud/refs/heads/main/Resources/Notes.txt"
+    $NotesUrl = "https://coresystem.vn/osd/Notes-Combo.txt"
 
     if ($HasInternet) {
         Invoke-WebRequest -Uri $NotesUrl -OutFile $NotePath -UseBasicParsing -TimeoutSec 60
@@ -144,16 +144,16 @@ try {
     }
 }
 catch {
-    Write-Host "[ERROR] Khong the tai file Notes.txt tu GitHub: $_" -ForegroundColor Red
+    Write-Host "[ERROR] Khong the tai file Notes.txt tu CoreSystem $_" -ForegroundColor Red
 }
 
 # ------------------------------------------------------------------------------
-# 4. SET WALLPAPER DESKTOP TU LINK GITHUB
+# 4. SET WALLPAPER DESKTOP TU LINK CORESYSTEM
 # ------------------------------------------------------------------------------
-Write-Host "`n[4/7] Dang tai va ap dung anh nen Desktop tu GitHub..." -ForegroundColor Yellow
+Write-Host "`n[4/7] Dang tai va ap dung anh nen Desktop tu CoreSystem..." -ForegroundColor Yellow
 
 try {
-    $WallpaperUrl = "https://raw.githubusercontent.com/coresystemvn/OSDCloud/refs/heads/main/Resources/wallpaper.jpg"
+    $WallpaperUrl = "https://coresystem.vn/osd/wallpaper.jpg"
     $LocalWallpaperFolder = "C:\Windows\Web\Wallpaper\CoreSystem"
     $LocalWallpaperPath = "$LocalWallpaperFolder\wallpaper.jpg"
 
@@ -291,6 +291,14 @@ try {
 catch {
     Write-Host "[WARNING] Khong the thiet lap lai ExecutionPolicy: $_" -ForegroundColor Yellow
 }
+
+# Thiet lap high performance
+
+try {
+    $guid = "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+    powercfg /q $guid *>$null
+    if ($?) { powercfg /setactive $guid }
+} catch { }
 
 Write-Host "`n=== [HOAN TAT] HE THONG SAN SANG KHOI DONG LAI CHINH THUC ===" -ForegroundColor Green
 

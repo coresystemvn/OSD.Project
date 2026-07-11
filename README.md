@@ -1,23 +1,94 @@
-### OSD Project by CORESYSTEM
+# OSD Project - Advanced Windows Deployment System
 
 [[English version](./README.en.md)]
 
+---
+
+## Giới thiệu
+
+OSD Project by CoreSystem là hệ thống triển khai Windows tiên tiến, được xây dựng trên nền tảng OSDeploy/OSDCloud. Hệ thống giúp quá trình cài đặt Windows trở nên nhanh chóng, bảo mật và phù hợp cho môi trường doanh nghiệp.
+
+---
+
 ## Tiêu chí
 
-- Luôn luôn cài đặt **nguồn sạch từ Microsoft** và update mới nhất
-- Toàn bộ thời gian cài đặt chỉ gói gọn **trong 30-45 phút** tùy tốc độ mạng Internet 
-- Tùy biến **automation chuẩn doanh nghiệp** thông qua việc xóa các ứng dụng bloatware có sẵn trong Windows, cài đặt bổ sung ứng dụng phù hợp môi trường văn phòng
-- Đáp ứng **tối đa nền tảng phần cứng bảo mật hiện đại** khi các hãng thiết bị bắt đầu siết chặt việc áp dụng firmware UEFI kết hợp khóa SecureBoot và chip bảo mật TPM2
-- Ngoài tính năng chủ đạo là cài đặt Windows thì hệ thống boot cũng tích hợp các công cụ bổ sung như kiểm tra phần cứng máy tính, quản lý phân vùng và sao lưu ổ đĩa giúp việc cài đặt an toàn, yên tâm hơn
-- **100% hợp pháp**, hệ thống không dùng bất kỳ phần mềm thương mại nào có thể gây ảnh hưởng trực tiếp hoặc gián tiếp tới các tranh chấp pháp lý doanh nghiệp
-- Phù hợp cho **đa dạng thiết bị phần cứng** từ các công ty như HP, Dell, Lenovo...
+- **Nguồn sạch:** Luôn cài đặt từ Microsoft chính hãng với bản cập nhật mới nhất
+- **Tốc độ:** Tiết kiệm vài giờ đồng hồ mỗi máy so với quy trình cài đặt thông thường
+  - Flow 2 (Business Tweaks): 13-15 phút
+  - Flow 3 (Tweaks + Apps): 20-25 phút
+  - Phụ thuộc tốc độ mạng và số ứng dụng cần cài
+- **Bảo mật tối đa:** Dùng WinPE gốc Microsoft, tương thích 100% các chuẩn bảo mật mới nhất (SecureBoot, TPM 2.0)
+- **Tùy biến doanh nghiệp:** Xóa bloatware, cài ứng dụng văn phòng phù hợp
+- **Công cụ tích hợp:** Kiểm tra phần cứng, quản lý phân vùng, sao lưu ổ đĩa
+- **100% hợp pháp:** Không dùng bất kỳ phần mềm có phí nào
+- **Đa thiết bị:** HP, Dell, Lenovo và nhiều hãng khác
 
-Bản nâng cấp mới theo định hướng tối ưu tối đa workflow cho quy trình cài đặt cho doanh nghiệp bằng việc tái cấu trúc luồng cài đặt, bộ công cụ, tạo mới hoàn toàn logic kết nối wifi cũng như xử lý ổ đĩa mã hóa Bitlocker cũng như giúp thao tác nhanh hơn qua hệ thống phím tắt
+---
 
 ## Minh họa
 
-Hệ thống hóa các cụm chức năng gồm thông tin sơ bộ hệ thống, cụm công cụ hỗ trợ cứu hộ máy và quan trọng nhất luồng setup Windows được tối ưu lại đủ cho nhu cầu của đa số doanh nghiệp với 3 tùy chọn sẵn. IT có thể tùy biến linh hoạt bằng cách điều chỉnh nội dung các file trong phần **Resources & Scripts** trước khi build .iso
+![Bootscreen](./Misc/main.png)
 
-![Bootscreen](Misc/main.png)
+---
 
+## Bắt đầu ngay
 
+Chọn phiên bản phù hợp với nhu cầu của bạn:
+
+| Phiên bản | Đối tượng | Mô tả |
+|-----------|-----------|-------|
+| **[Binary](./Getting-Started-Binary.md)** | Kỹ thuật viên IT | File self-contained (~128MB), triển khai nhanh |
+| **[PowerShell](./Getting-Started-PS.md)** | Đam mê IT | Mã nguồn mở, tùy chỉnh linh hoạt |
+
+---
+
+## Cấu trúc dự án
+
+```
+OSD.Project/
+├── Resources/
+│   ├── coresystem-ng.ps1           # File chính (PowerShell)
+│   ├── SetupFiles/                 # File cấu hình
+│   │   ├── unattend.xml
+│   │   ├── post-setup-tweaks.ps1
+│   │   └── post-setup-combo.ps1
+│   └── Next-Step/
+│       ├── next-step-tweaks.ps1
+│       └── next-step-combo.ps1
+├── Misc/
+├── README.md
+├── README.en.md
+├── LICENSE
+├── DISCLAIMER.md
+├── Getting-Started-Binary.md
+├── Getting-Started-PS.md
+└── advanced-topics.md
+```
+
+---
+
+## So sánh hai phiên bản
+
+| Thành phần | Binary | PowerShell |
+|------------|--------|------------|
+| **Đối tượng** | Kỹ thuật viên IT | Đam mê IT |
+| **File chính** | coresystem.exe | coresystem-ng.ps1 |
+| **Launcher** | winpeshl.ini | startnet.cmd |
+| **Kích thước ISO** | ~1.3GB | ~1.1GB |
+| **Tùy chỉnh** | Giới hạn | Không giới hạn |
+
+---
+
+## Tài liệu
+
+- **[Getting Started (Binary)](./Getting-Started-Binary.md)** - Dành cho IT technicians
+- **[Getting Started (PowerShell)](./Getting-Started-PS.md)** - Dành cho IT enthusiasts
+- **[Advanced Topics](./advanced-topics.md)** - Chủ đề nâng cao
+
+---
+
+## Liên hệ
+
+- **Website:** https://osd.coresystem.vn
+- **GitHub:** https://github.com/coresystemvn/OSD.Project
+- **Release:** https://github.com/coresystemvn/OSD.Project/releases

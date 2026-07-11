@@ -1,107 +1,151 @@
 <!DOCTYPE html>
-<html class="dark" lang="vi" style="">
-<head><meta charset="utf-8"><link rel="icon" href="img/favicon.png" sizes="any"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>OSD Project by CORESYSTEM</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-variant": "#2f353c",
-                    "outline": "#8a919e",
-                    "inverse-surface": "#dde3ec",
-                    "outline-variant": "#404752",
-                    "surface-bright": "#343a41",
-                    "secondary-fixed-dim": "#ffb77d",
-                    "primary-container": "#0078d4",
-                    "tertiary-fixed-dim": "#79dd68",
-                    "on-background": "#dde3ec",
-                    "on-secondary-fixed-variant": "#6e3900",
-                    "on-tertiary-fixed-variant": "#005303",
-                    "tertiary-fixed": "#94fa81",
-                    "primary": "#a3c9ff",
-                    "secondary-container": "#fd8b00",
-                    "surface-container-high": "#252b31",
-                    "secondary": "#ffb77d",
-                    "on-secondary-fixed": "#2f1500",
-                    "error": "#ffb4ab",
-                    "on-tertiary-container": "#ffffff",
-                    "on-error": "#690005",
-                    "on-primary-fixed-variant": "#004883",
-                    "background": "#0e141a",
-                    "on-primary": "#00315c",
-                    "tertiary": "#79dd68",
-                    "on-error-container": "#ffdad6",
-                    "surface-container": "#1a2027",
-                    "on-surface": "#dde3ec",
-                    "tertiary-container": "#22881d",
-                    "on-tertiary": "#003a01",
-                    "on-surface-variant": "#c0c7d4",
-                    "primary-fixed-dim": "#a3c9ff",
-                    "on-tertiary-fixed": "#002200",
-                    "on-secondary": "#4d2600",
-                    "inverse-primary": "#0060ab",
-                    "surface-dim": "#0e141a",
-                    "on-secondary-container": "#603100",
-                    "surface": "#0e141a",
-                    "error-container": "#93000a",
-                    "surface-container-highest": "#2f353c",
-                    "surface-container-lowest": "#090f15",
-                    "primary-fixed": "#d3e3ff",
-                    "secondary-fixed": "#ffdcc3",
-                    "surface-tint": "#a3c9ff",
-                    "on-primary-container": "#ffffff",
-                    "inverse-on-surface": "#2b3138",
-                    "surface-container-low": "#161c22",
-                    "on-primary-fixed": "#001c39"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "container-max": "1280px",
-                    "unit": "4px",
-                    "margin-mobile": "16px",
-                    "gutter": "24px",
-                    "stack-md": "16px",
-                    "stack-sm": "8px",
-                    "stack-lg": "32px"
-            },
-            "fontFamily": {
-                    "display-lg": ["Inter"],
-                    "mono-label": ["JetBrains Mono"],
-                    "mobile-h1": ["Inter"],
-                    "headline-sm": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "headline-md": ["Inter"],
-                    "body-md": ["Inter"]
-            },
-            "fontSize": {
-                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "mono-label": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "mobile-h1": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
-                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+<html class="dark" lang="vi"><head>
+<meta charset="utf-8"/><link rel="icon" href="src/favicon.png" sizes="any"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>OSD Project by CORESYSTEM</title>
+<meta content="Windows deployment, WinPE, OSDeploy, OSDCloud, enterprise imaging, secure boot, TPM 2.0, UEFI, Windows 11, IT automation, system deployment, disk imaging, free tools, open source" name="keywords"/>
+<meta content="Advanced Windows Deployment System - Fast, secure, and enterprise-ready Windows installation using WinPE with full SecureBoot and TPM 2.0 support" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "surface-variant": "#2f353c",
+                            "outline": "#8a919e",
+                            "inverse-surface": "#dde3ec",
+                            "outline-variant": "#404752",
+                            "surface-bright": "#343a41",
+                            "secondary-fixed-dim": "#ffb77d",
+                            "primary-container": "#0078d4",
+                            "tertiary-fixed-dim": "#79dd68",
+                            "on-background": "#dde3ec",
+                            "on-secondary-fixed-variant": "#6e3900",
+                            "on-tertiary-fixed-variant": "#005303",
+                            "tertiary-fixed": "#94fa81",
+                            "primary": "#a3c9ff",
+                            "secondary-container": "#fd8b00",
+                            "surface-container-high": "#252b31",
+                            "secondary": "#ffb77d",
+                            "on-secondary-fixed": "#2f1500",
+                            "error": "#ffb4ab",
+                            "on-tertiary-container": "#ffffff",
+                            "on-error": "#690005",
+                            "on-primary-fixed-variant": "#004883",
+                            "background": "#0e141a",
+                            "on-primary": "#00315c",
+                            "tertiary": "#79dd68",
+                            "on-error-container": "#ffdad6",
+                            "surface-container": "#1a2027",
+                            "on-surface": "#dde3ec",
+                            "tertiary-container": "#22881d",
+                            "on-tertiary": "#003a01",
+                            "on-surface-variant": "#c0c7d4",
+                            "primary-fixed-dim": "#a3c9ff",
+                            "on-tertiary-fixed": "#002200",
+                            "on-secondary": "#4d2600",
+                            "inverse-primary": "#0060ab",
+                            "surface-dim": "#0e141a",
+                            "on-secondary-container": "#603100",
+                            "surface": "#0e141a",
+                            "error-container": "#93000a",
+                            "surface-container-highest": "#2f353c",
+                            "surface-container-lowest": "#090f15",
+                            "primary-fixed": "#d3e3ff",
+                            "secondary-fixed": "#ffdcc3",
+                            "surface-tint": "#a3c9ff",
+                            "on-primary-container": "#ffffff",
+                            "inverse-on-surface": "#2b3138",
+                            "surface-container-low": "#161c22",
+                            "on-primary-fixed": "#001c39"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "container-max": "1280px",
+                            "unit": "4px",
+                            "margin-mobile": "16px",
+                            "gutter": "24px",
+                            "stack-md": "16px",
+                            "stack-sm": "8px",
+                            "stack-lg": "32px"
+                        },
+                        "fontFamily": {
+                            "display-lg": ["Inter"],
+                            "mono-label": ["JetBrains Mono"],
+                            "mobile-h1": ["Inter"],
+                            "headline-sm": ["Inter"],
+                            "body-lg": ["Inter"],
+                            "headline-md": ["Inter"],
+                            "body-md": ["Inter"]
+                        },
+                        "fontSize": {
+                            "display-lg": ["48px", {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                            }],
+                            "mono-label": ["14px", {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                            }],
+                            "mobile-h1": ["32px", {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                            }],
+                            "headline-sm": ["24px", {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }],
+                            "body-lg": ["18px", {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }],
+                            "headline-md": ["32px", {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }],
+                            "body-md": ["16px", {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }]
+                        }
+                    },
+                },
             }
-          },
-        },
-      }
-    }catch(_e){}</script></head><body class="bg-background text-on-background selection:bg-primary-container selection:text-white trust-grid">
+        } catch (_e) {}
+    </script>
+<style>
+        .trust-grid { background-image: radial-gradient(circle at 2px 2px, rgba(138,145,158,0.05) 1px, transparent 0); background-size: 40px 40px; }
+        .bloom-primary { box-shadow: 0 0 20px rgba(0, 120, 212, 0.3); }
+        .scanline { width: 100%; height: 100px; z-index: 1; background: linear-gradient(0deg, rgba(0, 120, 212, 0) 0%, rgba(0, 120, 212, 0.05) 50%, rgba(0, 120, 212, 0) 100%); opacity: 0.1; position: absolute; bottom: 0; pointer-events: none; }
+        .glass-panel { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .glass-panel:hover { transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white trust-grid">
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface-dim/90 backdrop-blur-xl border-b border-outline-variant/30">
 <div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: &quot;FILL&quot; 1;">settings</span>
-<span class="font-display-lg text-headline-sm font-bold tracking-tighter text-on-surface">OSD Project <span class="text-primary/60 text-xs ml-2 font-mono-label">by CORESYSTEM</span></span>
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-display-lg text-headline-sm font-bold tracking-tighter text-on-surface">OSD PROJECT</span>
 </div>
 <nav class="hidden md:flex gap-gutter">
-<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="https://github.com/coresystemvn/OSDCloud/wiki" target="_blank">Tài liệu</a>
-<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="https://github.com/coresystemvn/OSDCloud" target="_blank">GitHub</a>
-<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="https://coresystem.vn" target="_blank">CoreSystem</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#gallery">Thư viện</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#pricing">Giải pháp</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#workflows">Quy trình</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#docs">Tài liệu</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="https://github.com/coresystemvn/OSD.Project" target="_blank">GitHub</a>
 </nav>
 </div>
 </header>
@@ -109,41 +153,96 @@
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center opacity-30 mix-blend-screen" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB2U55Jjup7gMzYtTrK5-pRI3XNwbxhBEPPL1-Bh1l7RsWjXBVSVBtDOBHdig1ro69EQzAKROiBHvo2TjUaTHjlWPu7OKQqkpd3c9NDdja02u_RwqHKMaf7Pbuhsh5OmpCpFMx5moA2wQgntXrTVF-1rJf1a9698Oj5vc7prbDs0A8-3jX7adamdUkCJ5WvzWYKJE_mJAw_TbbjdVZDq_8soLmNAyIQqxZ7rRAXXsbwpd7u1Obi_gmGZoUAooWqLfwCsTug6NrIROw&quot;);"></div>
+<div class="w-full h-full bg-cover bg-center opacity-30 mix-blend-screen" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvidNiAjubFjgIPSohIMM-FnA4rt4h3UmHb8QGnYLxtz3Hya8Kjo6BMLKBOMfeFUT-lGgFFBzRp3lMCLGA1ltaTmCTRPA8zTQ-nDG73zGz367-x4gt2MPSPE9lafevpCKC2ySwTHLPx4e7iWzgVxIQF8W1rwLfgRpmGUO-Em5ROwJGO0wzEy8KmcjCrm94Ab7Zk4gxvFjQhZSJiLWmQqgA63jSPwfmnH3PUQa1PL-Y4CEvRN9Hhq23TW6s')"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
 </div>
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm bg-primary-container/20 border border-primary/30 text-primary font-mono-label mb-stack-lg uppercase tracking-widest text-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span> ENTERPRISE READY • DEPLOY SOLUTION</div>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-sm bg-primary-container/20 border border-primary/30 text-primary font-mono-label mb-stack-lg uppercase tracking-widest text-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                OSD PROJECT BY CORESYSTEM
+            </div>
 <h1 class="font-display-lg text-display-lg md:text-7xl mb-stack-md text-white max-w-5xl mx-auto leading-[1.1] tracking-tight">
-                Chuẩn Hóa Quy Trình <br class="hidden md:block"> Cài Đặt Windows <span class="text-primary">Doanh Nghiệp</span>
+                Chuẩn Hóa Quy Trình <br class="hidden md:block"/> Triển Khai Windows <span class="text-primary">Doanh Nghiệp</span>
 </h1>
 <p class="font-body-lg text-body-lg md:text-xl text-on-surface-variant mb-stack-lg max-w-3xl mx-auto leading-relaxed">
-                Hệ sinh thái WinPE chuyên dụng được đúc kết từ kinh nghiệm vận hành hạ tầng IT quy mô lớn. Ổn định, an toàn và tối ưu cho kỹ thuật viên chuyên nghiệp.
+                Nền tảng WinPE chuyên dụng được đúc kết từ kinh nghiệm vận hành hạ tầng IT quy mô lớn. Ổn định, an toàn và tối ưu tuyệt đối cho kỹ thuật viên chuyên nghiệp.
             </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-stack-md">
-<a class="bg-primary text-on-primary px-12 py-4 rounded-sm font-bold text-lg hover:brightness-110 active:scale-95 transition-all bloom-primary flex items-center gap-3" href="https://github.com/coresystemvn/OSDCloud" target="_blank">
+<a class="bg-primary text-on-primary px-12 py-4 rounded-sm font-bold text-lg hover:brightness-110 active:scale-95 transition-all bloom-primary flex items-center gap-3" href="https://github.com/coresystemvn/OSD.Project" target="_blank">
 <span class="material-symbols-outlined">code</span>
                     Xem trên GitHub
                 </a>
-                <a class="bg-primary text-on-primary px-12 py-4 rounded-sm font-bold text-lg hover:brightness-110 active:scale-95 transition-all bloom-primary flex items-center gap-3" href="https://github.com/coresystemvn/OSDCloud/wiki" target="_blank">
-<span class="material-symbols-outlined">book_4</span>
-                    Tài liệu kỹ thuật
+<a class="bg-surface-variant/30 backdrop-blur-md border border-outline-variant/30 text-on-surface px-12 py-4 rounded-sm font-bold text-lg hover:bg-surface-variant transition-all text-center" href="#docs">
+                    Quick start
                 </a>
-<!-- <button class="bg-surface-variant/30 backdrop-blur-md border border-outline-variant/30 text-on-surface px-12 py-4 rounded-sm font-bold text-lg hover:bg-surface-variant transition-all">
-                    Đọc tài liệu kỹ thuật
-                </button> -->
 </div>
 </div>
 <div class="scanline"></div>
 </section>
-<!-- Why CoreSystem (Trust-building) -->
-<section class="py-24 border-y border-outline-variant/20 bg-surface-container-low/20">
+<!-- Project Gallery Section -->
+<section class="py-24 bg-surface-container-low/20" id="gallery">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="mb-12 text-center">
+<div class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4 border-l-2 border-primary">Media Showcase</div>
+<h2 class="font-headline-md text-headline-md md:text-5xl text-white mb-6">Trải Nghiệm Hệ Thống</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Khám phá hệ sinh thái qua các hình ảnh thực tế và giao diện chức năng chuyên nghiệp.</p>
+</div>
+<div class="relative group max-w-5xl mx-auto">
+<div class="relative aspect-video overflow-hidden rounded-sm border border-outline-variant/30 bg-surface-container-lowest shadow-2xl">
+<div class="flex h-full transition-transform duration-700 ease-in-out" id="media-slider">
+<!-- Slide 1: Demo clip -->
+<div class="w-full h-full shrink-0">
+<video controls> <source alt="Video Thumbnail" src="./src/vid.mp4"  type="video/mp4"></video>
+</div>
+<!-- Slide 2: Main windows -->
+<div class="w-full h-full shrink-0">
+<img alt="Main window" class="w-full h-full object-cover" src="./src/0.png"/>
+</div>
+<!-- Slide 3: Bitlocker window -->
+<div class="w-full h-full shrink-0">
+<img alt="Bitlocker unlock window" class="w-full h-full object-cover" src="./src/1.png"/>
+</div>
+<!-- Slide 4: Wifi connector -->
+<div class="w-full h-full shrink-0">
+<img alt="Wifi connection window" class="w-full h-full object-cover" src="./src/2.png"/>
+</div>
+<!-- Slide 5: OS selection -->
+<div class="w-full h-full shrink-0">
+<img alt="OS Selection window" class="w-full h-full object-cover" src="./src/3.png"/>
+</div>
+<!-- Slide 6: Deployment window -->
+<div class="w-full h-full shrink-0">
+<img alt="Deployment window" class="w-full h-full object-cover" src="./src/4.png"/>
+</div>
+</div>
+<button class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-surface-dim/80 backdrop-blur-md border border-outline-variant/30 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary hover:text-on-primary" id="prev-slide">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-surface-dim/80 backdrop-blur-md border border-outline-variant/30 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-primary hover:text-on-primary" id="next-slide">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="flex justify-center gap-3 mt-8">
+<button class="slider-dot w-12 h-1 bg-primary rounded-full transition-all" data-index="0"></button>
+<button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="1"></button>
+<button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="2"></button>
+<button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="3"></button>
+<button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="4"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Section -->
+<section class="py-24 border-y border-outline-variant/20">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div>
 <div class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4 border-l-2 border-primary">Tại sao chọn OSD Project?</div>
-<h2 class="font-headline-md text-headline-md md:text-5xl text-white mb-6">Được thiết kế cho <span class="text-primary">Sự Chuyên Nghiệp</span></h2>
-<p class="text-on-surface-variant text-body-lg mb-8 leading-relaxed">OSD Project không chỉ là một bộ công cụ cứu hộ. Đây là kết quả của hàng ngàn giờ triển khai hệ thống trong môi trường doanh nghiệp khắt khe. Chúng tôi hiểu rằng trong IT chuyên nghiệp, <strong class="">Sự Ổn Định</strong> và <strong class="">Tính Quy Chuẩn</strong> là ưu tiên hàng đầu.</p>
+<h2 class="font-headline-md text-headline-md md:text-5xl text-white mb-6">Được thiết kế cho <span class="text-primary">Môi Trường Chuyên Nghiệp</span></h2>
+<p class="text-on-surface-variant text-body-lg mb-8 leading-relaxed">Không chỉ là một bộ công cụ cứu hộ. Đây là kết quả của hàng ngàn giờ triển khai hệ thống trong môi trường doanh nghiệp khắt khe. Chúng tôi hiểu rằng trong IT chuyên nghiệp, <strong>Sự Ổn Định</strong> và <strong>Tính Quy Chuẩn</strong> là ưu tiên hàng đầu.</p>
 <div class="space-y-6">
 <div class="flex gap-4">
 <div class="mt-1 w-10 h-10 shrink-0 flex items-center justify-center rounded-sm bg-surface-container-highest border border-outline-variant/30">
@@ -151,12 +250,12 @@
 </div>
 <div>
 <h4 class="text-white font-bold mb-1">Kinh nghiệm thực tiễn</h4>
-<p class="text-on-surface-variant text-sm">Xây dựng dựa trên các tiêu chuẩn vận hành thực tế tại các tập đoàn lớn, loại bỏ hoàn toàn các lỗi vặt thường gặp ở các bản WinPE phổ thông.</p>
+<p class="text-on-surface-variant text-sm">Xây dựng dựa trên các tiêu chuẩn vận hành thực tế tại các tập đoàn lớn, loại bỏ hoàn toàn các rủi ro thường gặp ở các bản WinPE phổ biến.</p>
 </div>
 </div>
 <div class="flex gap-4">
 <div class="mt-1 w-10 h-10 shrink-0 flex items-center justify-center rounded-sm bg-surface-container-highest border border-outline-variant/30">
-<span class="material-symbols-outlined text-primary" data-original-icon="standard">circle</span>
+<span class="material-symbols-outlined text-primary">circle</span>
 </div>
 <div>
 <h4 class="text-white font-bold mb-1">Chuẩn hóa 100%</h4>
@@ -171,8 +270,8 @@
 <div class="text-xs text-outline font-mono-label uppercase tracking-tighter">Độ ổn định triển khai</div>
 </div>
 <div class="p-8 bg-surface-container-high rounded-sm border border-outline-variant/20 text-center">
-<div class="text-4xl font-bold text-primary mb-2">20m</div>
-<div class="text-xs text-outline font-mono-label uppercase tracking-tighter">Thời gian CÀI ĐẶT</div>
+<div class="text-4xl font-bold text-primary mb-2">15m</div>
+<div class="text-xs text-outline font-mono-label uppercase tracking-tighter">Thời gian cài đặt</div>
 </div>
 <div class="p-8 bg-surface-container-high rounded-sm border border-outline-variant/20 text-center">
 <div class="text-4xl font-bold text-primary mb-2">0%</div>
@@ -180,8 +279,75 @@
 </div>
 <div class="p-8 bg-surface-container-high rounded-sm border border-outline-variant/20 text-center">
 <div class="text-4xl font-bold text-primary mb-2">24/7</div>
-<div class="text-xs text-outline font-mono-label uppercase tracking-tighter">Sẵn sàng cứu hộ</div>
+<div class="text-xs text-outline font-mono-label uppercase tracking-tighter">Luôn sẵn sàng</div>
 </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-surface-container-lowest" id="pricing">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center mb-16">
+<div class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-4 border-l-2 border-primary">Hành trình bắt đầu</div>
+<h2 class="font-headline-md text-headline-md md:text-4xl text-white mb-4">Lựa Chọn Giải Pháp</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Chúng tôi cung cấp các gói giải pháp từ định hướng cộng đồng đến chuyên sâu cho doanh nghiệp.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-high p-8 rounded-sm border border-outline-variant/30 flex flex-col hover:border-primary/50 transition-colors">
+<div class="mb-8">
+<h3 class="text-white font-bold text-xl mb-1">IT Pro | Fast-Track</h3>
+<div class="text-primary font-mono-label text-sm uppercase">Community Edition</div>
+</div>
+<div class="text-4xl font-bold text-white mb-6">Free <span class="text-body-md font-normal text-outline">/ Community</span></div>
+<div class="flex-grow">
+<p class="text-on-surface-variant mb-6 text-sm">Cung cấp file thực thi exe và tài liệu để tự build trong 9-10 bước.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">check</span> File thực thi sẵn sàng dùng ngay
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Tài liệu hướng dẫn chi tiết, dễ theo dõi
+                        </li>
+</ul>
+</div>
+<a href="https://github.com/coresystemvn/OSD.Project/releases" target="_blank">
+<button class="w-full py-3 border border-primary/30 text-primary font-bold rounded-sm hover:bg-primary/10 transition-colors uppercase tracking-widest text-xs">Tải về ngay</button>
+</a>
+</div>
+<div class="bg-surface-container-high p-8 rounded-sm border-2 border-primary relative flex flex-col shadow-2xl shadow-primary/10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-sm">Recommended</div>
+<div class="mb-8">
+<h3 class="text-white font-bold text-xl mb-1">Research &amp; Deep-dive</h3>
+<div class="text-primary font-mono-label text-sm uppercase">Full Transparency</div>
+</div>
+<div class="text-4xl font-bold text-white mb-6">Free <span class="text-body-md font-normal text-outline">/ Open Source</span></div>
+<div class="flex-grow">
+<p class="text-on-surface-variant mb-6 text-sm">Mã nguồn mở, tài liệu hướng dẫn nhanh và chuyên sâu.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">check</span> 100% mã mở
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Hướng dẫn tùy biến nâng cao
+                        </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg">check</span> Làm chủ hệ thống
+                        </li>
+</ul>
+</div>
+<a href="https://github.com/coresystemvn/OSD.Project" target="_blank">
+<button class="w-full py-3 bg-primary text-on-primary font-bold rounded-sm hover:brightness-110 transition-all uppercase tracking-widest text-xs">Khám phá GitHub</button>
+</a>
+</div>
+<div class="bg-surface-container-high p-8 rounded-sm border border-outline-variant/30 flex flex-col opacity-80">
+<div class="mb-8">
+<h3 class="text-white font-bold text-xl mb-1">Business</h3>
+<div class="text-outline font-mono-label text-sm uppercase">Custom Solutions</div>
+</div>
+<div class="text-4xl font-bold text-white mb-6">-</div>
+<div class="flex-grow">
+<p class="text-on-surface-variant mb-6 text-sm italic">Coming soon</p>
+<p class="text-outline text-xs leading-relaxed">Bổ sung tính năng nâng cao. Dành cho các tổ chức cần bản build WinPE tùy chỉnh 100% theo nhu cầu nội bộ.</p>
 </div>
 </div>
 </div>
@@ -194,15 +360,15 @@
 <span class="font-mono-label text-primary uppercase tracking-widest text-xs">Standardized Pipelines</span>
 <div class="h-[1px] w-12 bg-primary"></div>
 </div>
-<h2 class="font-headline-md text-headline-md md:text-4xl text-white mb-4">3 Luồng Triển Khai Đáp Ứng Mọi Nhu Cầu</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Tối ưu hóa quy trình làm việc bằng cách chia nhỏ các kịch bản cài đặt, giúp kỹ thuật viên linh hoạt xử lý từ máy cá nhân đến hệ thống workstation phức tạp trong doanh nghiệp.</p>
+<h2 class="font-headline-md text-headline-md md:text-4xl text-white mb-4">3 Luồng Triển Khai Đáp Ứng Tối Đa Nhu Cầu</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Tối ưu hóa quy trình làm việc bằng cách chia nhỏ các kịch bản cài đặt, giúp kỹ thuật viên linh hoạt xử lý từ máy cá nhân đến hệ thống workstation phức tạp.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Card 1 -->
-<div class="glass-panel p-gutter rounded-sm relative group overflow-hidden border-t-2 border-primary">
+<div class="glass-panel p-gutter rounded-sm relative group overflow-hidden border-t-2 border-primary bg-surface-container-low/40 backdrop-blur-md">
 <div class="flex justify-between items-start mb-8">
 <div class="w-12 h-12 bg-primary/10 border border-primary/30 flex items-center justify-center rounded-sm font-mono-label text-primary text-2xl font-bold">01</div>
-<span class="hotkey-badge px-2 py-1 text-[10px] text-primary uppercase font-bold">[F1] DEFAULT</span>
+<span class="hotkey-badge px-2 py-1 text-[10px] text-primary uppercase font-bold">[1] DEFAULT</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-white mb-4">Setup Windows [Clean]</h3>
 <p class="font-body-md text-on-surface-variant mb-6">Dành cho người dùng cần sự nguyên bản. Cài đặt trực tiếp từ cloud Microsoft, không lược bỏ, không can thiệp, bảo vệ toàn vẹn chữ ký số của hệ thống.</p>
@@ -212,105 +378,172 @@
 </ul>
 </div>
 <!-- Card 2 -->
-<div class="glass-panel p-gutter rounded-sm relative group overflow-hidden border-t-2 border-secondary">
+<div class="glass-panel p-gutter rounded-sm relative group overflow-hidden border-t-2 border-secondary bg-surface-container-low/40 backdrop-blur-md">
 <div class="flex justify-between items-start mb-8">
 <div class="w-12 h-12 bg-secondary/10 border border-secondary/30 flex items-center justify-center rounded-sm font-mono-label text-secondary text-2xl font-bold">02</div>
-<span class="hotkey-badge px-2 py-1 text-[10px] text-secondary uppercase font-bold">[F2] BUSINESS</span>
+<span class="hotkey-badge px-2 py-1 text-[10px] text-secondary uppercase font-bold">[2] BUSINESS</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-white mb-4">Setup Windows [Tweaks]</h3>
 <p class="font-body-md text-on-surface-variant mb-6">Tối ưu cho máy văn phòng. Tích hợp sẵn tùy biến registry chuẩn, tắt telemetry, tối ưu hóa các service giúp máy chạy mượt mà ngay sau khi cài đặt.</p>
 <ul class="space-y-2 mb-8 text-sm text-on-surface-variant/80">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span>Original Microsoft distribution</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Original Microsoft distribution</li>
 <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Business-ready tweaks</li>
 </ul>
 </div>
 <!-- Card 3 -->
-<div class="glass-panel p-gutter rounded-sm relative group overflow-hidden border-t-2 border-tertiary">
+<div class="glass-panel p-gutter rounded-sm relative group overflow-hidden border-t-2 border-tertiary bg-surface-container-low/40 backdrop-blur-md">
 <div class="flex justify-between items-start mb-8">
 <div class="w-12 h-12 bg-tertiary/10 border border-tertiary/30 flex items-center justify-center rounded-sm font-mono-label text-tertiary text-2xl font-bold">03</div>
-<span class="hotkey-badge px-2 py-1 text-[10px] text-tertiary uppercase font-bold">[F3] FULL</span>
+<span class="hotkey-badge px-2 py-1 text-[10px] text-tertiary uppercase font-bold">[3] FULL</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm text-white mb-4">Setup Windows [Full]</h3>
-<p class="font-body-md text-on-surface-variant mb-6">Giải pháp trọn gói. Cài đặt Windows đi kèm bộ Driver mới nhất và các phần mềm thiết yếu (Office, PDF, Browser) tự động hoàn toàn.</p>
+<p class="font-body-md text-on-surface-variant mb-6">Giải pháp trọn gói. Cài đặt Windows đi kèm bộ Driver mới nhất và các phần mềm thiết yếu (Office, PDF, Browser) tự động hoàn toàn..</p>
 <ul class="space-y-2 mb-8 text-sm text-on-surface-variant/80">
 <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Original Microsoft distribution</li>
 <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Business-ready tweaks with softwares</li>
 </ul>
 </div>
 </div>
-</section><section class="py-24 bg-surface-container-lowest border-y border-outline-variant/20" id="quick-docs">
+</section>
+<!-- Quick Docs Section -->
+<section class="py-24 bg-surface-container-low/30" id="docs">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="mb-12">
-<div class="inline-block px-3 py-1 bg-tertiary/10 text-tertiary text-xs font-bold tracking-widest uppercase mb-4 border-l-2 border-tertiary">Tài liệu nhanh</div>
-<h2 class="font-headline-md text-headline-md text-white">Hướng Dẫn Kỹ Thuật</h2>
+<h2 class="font-headline-md text-headline-md text-white mb-4 text-center">Quick Docs</h2>
+<div class="flex flex-wrap justify-center gap-4 border-b border-outline-variant/30 mt-8" id="docs-tabs">
+<button class="px-6 py-3 text-sm font-bold border-b-2 border-primary text-primary transition-all tab-btn" data-tab="flow">Quy trình khởi tạo</button>
+<button class="px-6 py-3 text-sm font-bold border-b-2 border-transparent text-outline hover:text-white transition-all tab-btn" data-tab="security">Tiêu chuẩn bảo mật</button>
+<button class="px-6 py-3 text-sm font-bold border-b-2 border-transparent text-outline hover:text-white transition-all tab-btn" data-tab="keys">Hướng dẫn phím tắt</button>
 </div>
-<div class="flex flex-col lg:flex-row gap-gutter">
-<!-- Side Navigation -->
-<aside class="lg:w-1/4 space-y-2">
-<button class="w-full text-left px-4 py-3 rounded-sm bg-primary/10 text-primary border-l-2 border-primary font-medium transition-all">
-                    Quy trình khởi tạo
-                </button>
-<button class="w-full text-left px-4 py-3 rounded-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
-                    Tiêu chuẩn bảo mật
-                </button>
-<button class="w-full text-left px-4 py-3 rounded-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all">
-                    Hướng dẫn phím tắt
-                </button>
-
-</aside>
-<!-- Document Content -->
-<div class="lg:w-3/4 bg-surface-container-high border border-outline-variant/30 rounded-sm overflow-hidden">
-<div class="bg-surface-container-highest px-6 py-3 border-b border-outline-variant/30 flex items-center justify-between">
-<div class="flex gap-1.5">
-<div class="w-3 h-3 rounded-full bg-error/40"></div>
-<div class="w-3 h-3 rounded-full bg-secondary/40"></div>
-<div class="w-3 h-3 rounded-full bg-tertiary/40"></div>
 </div>
-<span class="text-xs font-mono-label text-outline uppercase tracking-widest">quick_start.md</span>
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-sm p-8 min-h-[400px]">
+<!-- Flow Tab -->
+<div class="tab-content" id="tab-flow">
+<div class="prose prose-invert max-w-none">
+<h4 class="text-white font-bold mb-4">Hướng dẫn nhanh</h4>
+<ol class="space-y-4 text-on-surface-variant">
+<li><strong class="text-primary">Bước 1:</strong> Tạo đĩa WinPE cơ bản theo quy trình OSDeploy [5 bước]</li>
+<li><strong class="text-primary">Bước 2:</strong> Tùy biến WinPE theo OSD Project by CORESYSTEM [3 bước]</li>
+<li><strong class="text-primary">Bước 3:</strong> Tạo đĩa ISO sẵn sàng sử dụng [1 bước]</li>
+</ol>
 </div>
-<div class="p-8 font-body-md text-on-surface-variant leading-relaxed"><h3 class="text-white font-bold text-xl mb-6">Quy trình khởi tạo (Quickstart)</h3><div class="space-y-6"><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p class="">Tạo đĩa WinPE cơ bản theo quy trình OSDeploy [5 bước]</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p class="">Tùy biến WinPE theo OSD Project by CORESYSTEM [3 bước]</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p class="">Tạo đĩa boot sẵn sàng sử dụng [1 bước]</p></div></div><div class="mt-8 bg-surface-container-lowest p-4 rounded-sm border border-outline-variant/20 font-mono-label text-sm"><div class="flex justify-between mb-2 opacity-50"><span class="">PowerShell</span><span class="material-symbols-outlined text-sm cursor-pointer hover:text-primary">content_copy</span></div><div class="text-tertiary"><span class="text-outline">PS C:\&gt;</span> Update-OSDeployBootISO</div></div><div class="mt-12 pt-8 border-t border-outline-variant/20"><a class="inline-flex items-center gap-2 text-primary hover:gap-4 transition-all font-bold" href="https://github.com/coresystemvn/OSDCloud/wiki" target="_blank">Xem toàn bộ tài liệu trên GitHub<span class="material-symbols-outlined">arrow_right_alt</span></a></div></div>
+</div>
+<!-- Security Tab -->
+<div class="tab-content hidden" id="tab-security">
+<div class="prose prose-invert max-w-none">
+<h4 class="text-white font-bold mb-4">Hệ thống tuân thủ bảo mật 4 lớp</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> <strong>Core Integrity:</strong>
+Hệ thống sử dụng nền tảng ADK chính thống từ Microsoft đảm bảo tối đa tương thích với các nền tảng bảo mật mới nhất</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> <strong>Secure Boot:</strong> Tương thích hoàn hảo với UEFI Secure Boot mà không cần tắt bảo mật BIOS.</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> <strong>Legal Compliance:</strong> Không sử dụng các phần mềm vi phạm chính sách bản quyền</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary">check_circle</span> <strong>Clean Code:</strong> Mã nguồn mở 100%, minh bạch, rõ ràng ở mọi giai đoạn vận hành</li>
+</ul>
+</div>
+</div>
+<!-- Keys Tab -->
+<div class="tab-content hidden" id="tab-keys">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="text-white font-bold">Phím tắt triển khai (Function Keys)</h4>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-primary">[1]</span>
+<span class="text-sm">Setup Windows [Default]</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-secondary">[2]</span>
+<span class="text-sm">Setup Windows [Tweaks]</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-tertiary">[3]</span>
+<span class="text-sm">Setup Windows [Tweaks + Apps]</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold">Công cụ hệ thống</h4>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F1]</span>
+<span class="text-sm">Unlock Bitlocker</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F2]</span>
+<span class="text-sm">Wifi Connection</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F4]</span>
+<span class="text-sm">Notepad</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F5]</span>
+<span class="text-sm">Diskpart</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F6]</span>
+<span class="text-sm">Powershell</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F7]</span>
+<span class="text-sm">Disk/Partition backup</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F8]</span>
+<span class="text-sm">File Explorer</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F9]</span>
+<span class="text-sm">Hardware Information</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F10]</span>
+<span class="text-sm">Browser</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F11]</span>
+<span class="text-sm">About system</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-surface-container-high rounded-sm">
+<span class="font-mono-label text-outline">[F12]</span>
+<span class="text-sm">Reboot system</span>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
-<!-- Enterprise Lead Generation Form -->
-<!-- Security & Compliance Section -->
-<section class="py-24 bg-surface-container-lowest" id="security">
+<!-- Security & Compliance Details -->
+<section class="py-24 bg-surface-container-lowest">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
 <div class="flex flex-col lg:flex-row gap-16 items-start">
 <div class="lg:w-1/3">
 <div class="w-16 h-16 bg-primary/10 border border-primary/20 flex items-center justify-center rounded-xl mb-6">
-<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: &quot;FILL&quot; 1;">admin_panel_settings</span>
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
 </div>
 <h2 class="font-headline-md text-headline-md text-white mb-4">An Toàn &amp; Tuân Thủ Tuyệt Đối</h2>
-<p class="text-on-surface-variant leading-relaxed">Trong môi trường doanh nghiệp, bảo mật không phải là một tính năng, đó là yêu cầu bắt buộc. OSD Project được xây dựng để vượt qua những tiêu chuẩn bảo mật khắt khe nhất.</p>
+<p class="text-on-surface-variant leading-relaxed">Trong môi trường doanh nghiệp, bảo mật không phải là một tính năng, đó là yêu cầu bắt buộc. Dự án này được xây dựng để đáp ứng những tiêu chuẩn bảo mật khắt khe nhất.</p>
 </div>
 <div class="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
 <div class="p-6 bg-surface-container rounded-sm border border-outline-variant/30">
 <h4 class="text-white font-bold flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-tertiary">balance</span>
-                            100% Legal &amp; Clean
+<span class="material-symbols-outlined text-tertiary">balance</span> 100% Legal &amp; Clean
                         </h4>
 <p class="text-on-surface-variant text-sm">Hệ thống chỉ sử dụng các công cụ mã nguồn mở (Open Source) và miễn phí hợp pháp. Không chứa mã độc, không crack, không vi phạm bản quyền phần mềm bên thứ ba.</p>
 </div>
 <div class="p-6 bg-surface-container rounded-sm border border-outline-variant/30">
 <h4 class="text-white font-bold flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-primary">verified</span>
-                            Secure Boot Ready
+<span class="material-symbols-outlined text-primary">verified</span> Secure Boot Ready
                         </h4>
 <p class="text-on-surface-variant text-sm">Hỗ trợ đầy đủ SecureBoot mà không cần tắt bảo mật BIOS hay nạp MOK enrollment. Tương thích hoàn hảo với phần cứng đời mới nhất.</p>
 </div>
 <div class="p-6 bg-surface-container rounded-sm border border-outline-variant/30">
 <h4 class="text-white font-bold flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-secondary">encrypted</span>
-                            Bitlocker Optimized
+<span class="material-symbols-outlined text-secondary">encrypted</span> Bitlocker Optimized
                         </h4>
 <p class="text-on-surface-variant text-sm">Tích hợp sẵn bộ giải mã Bitlocker chính quy cho phép truy xuất dữ liệu an toàn khi có khóa phục hồi mà không làm ảnh hưởng đến cấu trúc mã hóa.</p>
 </div>
 <div class="p-6 bg-surface-container rounded-sm border border-outline-variant/30">
 <h4 class="text-white font-bold flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-outline">history_edu</span>
-                            Audit Trail
+<span class="material-symbols-outlined text-outline">history_edu</span> Audit Trail
                         </h4>
 <p class="text-on-surface-variant text-sm">Mọi thao tác cài đặt đều thể hiện log chi tiết giúp quản trị viên dễ dàng kiểm soát và truy vết quy trình triển khai trên toàn hệ thống.</p>
 </div>
@@ -324,35 +557,27 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-md">
 <div class="flex flex-col gap-2">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: &quot;FILL&quot; 1;">settings</span>
-<span class="font-mono-label text-sm uppercase tracking-[0.3em] text-on-surface font-bold">OSD Project <span class="text-primary/60 text-[10px] ml-2">by CORESYSTEM</span></span>
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-mono-label text-sm uppercase tracking-[0.3em] text-on-surface font-bold">OSD PROJECT</span>
 </div>
 <p class="text-outline text-sm max-w-xs">Giải pháp triển khai Windows mã nguồn mở cho môi trường IT chuyên nghiệp. Tự hào được tin dùng bởi cộng đồng IT Admin Việt Nam.</p>
-<p class="text-outline/50 text-[10px] font-mono-label mt-4">© 2026 a project by CoreSystem. Built with OSDCloud.</p>
+<p class="text-outline/50 text-[10px] font-mono-label mt-4">© 2026 OSD Project by CORESYSTEM.</p>
 </div>
 <div class="flex gap-12">
 <div class="flex flex-col gap-3">
-<span class="text-white font-bold text-xs uppercase tracking-widest">Tài liệu</span>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSDCloud/wiki" target="_blank">Github wiki</a>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSDCloud" target="_blank">Github repo</a>
+<span class="text-white font-bold text-xs uppercase tracking-widest">Github</span>
+<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSD.Project/releases" target="_blank">Release</a>
+<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSD.Project" target="_blank">Repository</a>
 </div>
 <div class="flex flex-col gap-3">
 <span class="text-white font-bold text-xs uppercase tracking-widest">Links</span>
 <a class="text-outline text-sm hover:text-primary transition-colors" href="https://coresystem.vn" target="_blank">CoreSystem</a>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://www.osdeploy.com" target="_blank">OSDeploy</a>
 <a class="text-outline text-sm hover:text-primary transition-colors" href="https://osdcloud.com" target="_blank">OSDCloud</a>
 </div>
 </div>
 </div>
 </footer>
-<script class="">
-    // Micro-interaction for glass panels
-    document.addEventListener('mousemove', (e) => {
-        const panels = document.querySelectorAll('.glass-panel');
-        const x = e.clientX;
-        const y = e.clientY;
-        
-        panels.forEach(</script><div class="fixed bottom-24 right-8 z-50 flex flex-col gap-3">
+<div class="fixed bottom-24 right-8 z-50 flex flex-col gap-3">
 <a class="w-12 h-12 rounded-full bg-primary/10 backdrop-blur-md border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-lg bloom-primary" href="https://zalo.me/0775981868" target="_blank">
 <span class="material-symbols-outlined">chat_bubble</span>
 </a>
@@ -362,12 +587,78 @@
 <a class="w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/30 flex items-center justify-center text-on-surface hover:border-primary transition-all shadow-lg" href="mailto:tructt@coresystem.vn">
 <span class="material-symbols-outlined">mail_shield</span>
 </a>
-</div><button class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-surface-bright/80 backdrop-blur-md border border-primary/30 text-primary rounded-sm flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary hover:text-on-primary active:scale-95 shadow-lg" id="back-to-top">
-<span class="material-symbols-outlined">arrow_warm_up</span>
+</div>
+<button class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-surface-bright/80 backdrop-blur-md border border-primary/30 text-primary rounded-sm flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary hover:text-on-primary active:scale-95 shadow-lg" id="back-to-top">
+<span class="material-symbols-outlined">arrow_upward</span>
 </button>
 <script>
+    // Tab functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            
+            tabBtns.forEach(b => {
+                b.classList.remove('border-primary', 'text-primary');
+                b.classList.add('border-transparent', 'text-outline');
+            });
+            btn.classList.remove('border-transparent', 'text-outline');
+            btn.classList.add('border-primary', 'text-primary');
+
+            tabContents.forEach(content => {
+                if(content.id === `tab-${tabId}`) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // Slider functionality
+    (function() {
+        const slider = document.getElementById('media-slider');
+        const dots = document.querySelectorAll('.slider-dot');
+        const prevBtn = document.getElementById('prev-slide');
+        const nextBtn = document.getElementById('next-slide');
+        let currentIndex = 0;
+        const totalSlides = 6;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.classList.replace('w-3', 'w-12');
+                    dot.classList.replace('bg-outline-variant/50', 'bg-primary');
+                } else {
+                    dot.classList.replace('w-12', 'w-3');
+                    dot.classList.replace('bg-primary', 'bg-outline-variant/50');
+                }
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateSlider();
+            });
+        });
+    })();
+
+    // Back to top button
     const backToTopBtn = document.getElementById('back-to-top');
-    
     window.addEventListener('scroll', () => {
         if (window.scrollY > 400) {
             backToTopBtn.classList.remove('opacity-0', 'invisible');
@@ -379,15 +670,22 @@
     });
 
     backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Intersection observer for section reveals
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
         });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
     });
 </script>
-
-
-
-<script class="">const docsContent = { 'Quy trình khởi tạo': `<h3 class="text-white font-bold text-xl mb-6">Quy trình khởi tạo (Quickstart)</h3><div class="space-y-6"><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p>Tạo đĩa WinPE cơ bản theo quy trình OSDeploy [5 bước]</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p>Tùy biến WinPE theo OSD Project by CORESYSTEM [3 bước]</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p>Tạo đĩa boot sẵn sàng sử dụng [1 bước]</p></div></div><div class="mt-8 bg-surface-container-lowest p-4 rounded-sm border border-outline-variant/20 font-mono-label text-sm"><div class="flex justify-between mb-2 opacity-50"><span>PowerShell</span><span class="material-symbols-outlined text-sm cursor-pointer hover:text-primary">content_copy</span></div><div class="text-tertiary"><span class="text-outline">PS C:\\></span> Update-OSDeployBootISO</div></div>`, 'Tiêu chuẩn bảo mật': `<h3 class="text-white font-bold text-xl mb-6">Tiêu chuẩn bảo mật</h3><div class="space-y-6"><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p>Hệ thống sử dụng nền tảng ADK chính thống từ Microsoft đảm bảo tối đa tương thích với các nền tảng bảo mật mới nhất</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p>Không sử dụng các phần mềm vi phạm chính sách bản quyền</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">•</span><p>Mã nguồn mở 100%, minh bạch, rõ ràng ở mọi giai đoạn vận hành</p></div></div>`, 'Hướng dẫn phím tắt': `<h3 class="text-white font-bold text-xl mb-6">Hướng dẫn phím tắt</h3><p class="mb-6">Không chỉ mang đến một giao diện hài hòa bố trí các khu chức năng khoa học mà hệ thống còn được thiết kế theo định hướng keyboard-driven, giúp tối ưu hóa quá trình thao tác</p><div class="space-y-4"><div class="flex gap-4"><span class="font-mono-label text-primary">F1 & F2</span><p>xử lý Bitlocker và Wifi, tự ngắt khi không cần thiết</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">F4 - F6</span><p>gọi các công cụ có sẵn của Windows</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">F7 - F10</span><p>cung cấp các công cụ cứu hộ và tiện ích phù hợp môi trường WinPE</p></div><div class="flex gap-4"><span class="font-mono-label text-primary">F11 & F12</span><p>hiển thị thông tin ứng dụng và reboot máy khi cần thiết</p></div></div>` }; document.querySelectorAll('#quick-docs aside button').forEach(btn => { btn.addEventListener('click', () => { const key = btn.innerText.trim(); const contentArea = document.querySelector('#quick-docs .lg\\:w-3\\/4 > div:nth-child(2)'); if (docsContent[key]) { contentArea.innerHTML = docsContent[key] + '<div class="mt-12 pt-8 border-t border-outline-variant/20"><a class="inline-flex items-center gap-2 text-primary hover:gap-4 transition-all font-bold" href="https://github.com/coresystemvn/OSDCloud/wiki">Xem toàn bộ tài liệu trên GitHub<span class="material-symbols-outlined">arrow_right_alt</span></a></div>'; document.querySelectorAll('#quick-docs aside button').forEach(b => { b.className = 'w-full text-left px-4 py-3 rounded-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all'; }); btn.className = 'w-full text-left px-4 py-3 rounded-sm bg-primary/10 text-primary border-l-2 border-primary font-medium transition-all'; } }); });</script>
-
 </body></html>
