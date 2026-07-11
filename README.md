@@ -27,7 +27,7 @@ OSD Project by CoreSystem là hệ thống triển khai Windows tiên tiến, đ
 
 ## Minh họa
 
-![Bootscreen](./Misc/main.png)
+![Bootscreen](./Misc/main.webp)
 
 ---
 

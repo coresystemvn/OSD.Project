@@ -25,7 +25,7 @@ OSD project by CoreSystem is an advanced Windows deployment system built on OSDe
 
 ## Screenshot
 
-![Bootscreen](./Misc/main.png)
+![Bootscreen](./Misc/main.webp)
 
 ---
 
