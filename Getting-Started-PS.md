@@ -15,9 +15,10 @@
 - File ISO Windows 11
 - Git (để clone repo)
 
-**Quan trọng:** Luôn chạy terminal/PowerShell ở chế độ Administrator. Thiếu quyền sẽ gây lỗi ở giai đoạn build và copy cấu trúc file.
-
-**Lưu ý:** OSDeploy yêu cầu PowerShell 7.6 và **máy vật lý** để build. Sau khi build xong file ISO, có thể test ở bất kỳ đâu (VM hoặc máy vật lý).
+**Quan trọng:** 
+- Luôn chạy terminal/PowerShell ở chế độ Administrator.
+- **Yêu cầu bắt buộc:** Do kiến trúc các module OSDeploy đòi hỏi truy cập trực tiếp vào phần cứng để build boot, bạn **bắt buộc phải build trên máy vật lý**. Sau khi build xong ISO, bạn có thể kiểm thử (test) trên máy ảo hoặc máy vật lý tùy ý.
+- **Tính ổn định:** Để tránh ảnh hưởng từ các thay đổi của OSDCloud upstream, hãy sử dụng các module PowerShell đã được cung cấp trong thư mục `Misc/` của dự án.
 
 ---
 
@@ -187,10 +188,9 @@ OSDCloud/
 - [ ] startnet.cmd đã cấu hình
 - [ ] Unmount /commit thành công
 
-### Kiểm tra
-- [ ] USB đã tạo bằng Rufus
-- [ ] Boot thử thành công
-- [ ] CoreSystem khởi động đúng
+### Kiểm tra thành công (Validation)
+- [ ] **Kích thước ISO:** Đảm bảo file ISO sau khi build có kích thước khoảng ~1.1GB (± 50MB).
+- [ ] **Boot thử:** Hãy boot thử vào máy ảo (Gen 2, hỗ trợ Secure Boot) trước khi mang ra máy vật lý để đảm bảo môi trường WinPE đã khởi động đúng.
 
 ---
 

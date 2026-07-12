@@ -33,10 +33,18 @@ OSD project by CoreSystem is an advanced Windows deployment system built on OSDe
 
 Choose the version that fits your needs:
 
+```mermaid
+graph TD
+    A[Which version do you choose?] --> B(Need fast deployment,<br>high performance, stable)
+    A --> C(Need deep understanding,<br>customizable code,<br>don't mind the slowness)
+    B --> D[Binary Version]
+    C --> E[PowerShell Version]
+```
+
 | Version | Target Audience | Description |
 |---------|-----------------|-------------|
-| **[Binary](./Getting-Started-Binary.md)** | IT Technicians | Self-contained file (~128MB), quick deployment |
-| **[PowerShell](./Getting-Started-PS.md)** | IT Enthusiasts | Open source, fully customizable |
+| **[Binary](./Getting-Started-Binary.md)** | IT Technicians | C# WPF (.NET 10) - Performance optimized |
+| **[PowerShell](./Getting-Started-PS.md)** | IT Enthusiasts | Native PowerShell - Fully customizable |
 
 ---
 

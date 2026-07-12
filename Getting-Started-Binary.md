@@ -5,6 +5,8 @@
 
 **Ghi chú:** Đây là lối tắt cho ai muốn nhanh nhất có đĩa boot. Dự án không chia sẻ file .iso pre-built để tránh vi phạm bản quyền. Làm theo từng bước là được.
 
+**Thông tin kỹ thuật:** Phiên bản này được refactor hoàn toàn sang C# WPF (.NET 10) để tối ưu hóa tốc độ thực thi trong môi trường WinPE, mang lại UX mượt mà hơn trong khi vẫn giữ nguyên bộ tính năng cốt lõi của dự án.
+
 ---
 
 ## Yêu cầu hệ thống
@@ -14,9 +16,10 @@
 - USB drive (8GB trở lên)
 - File ISO Windows 11
 
-**Quan trọng:** Luôn chạy terminal/PowerShell ở chế độ Administrator. Thiếu quyền sẽ gây lỗi ở giai đoạn build và copy cấu trúc file.
-
-**Lưu ý:** OSDeploy yêu cầu PowerShell 7.6 và **máy vật lý** để build. Sau khi build xong file ISO, có thể test ở bất kỳ đâu (VM hoặc máy vật lý).
+**Quan trọng:** 
+- Luôn chạy terminal/PowerShell ở chế độ Administrator.
+- **Yêu cầu bắt buộc:** Do kiến trúc các module OSDeploy đòi hỏi truy cập trực tiếp vào phần cứng để build boot, bạn **bắt buộc phải build trên máy vật lý**. Sau khi build xong ISO, bạn có thể kiểm thử (test) trên máy ảo hoặc máy vật lý tùy ý.
+- **Tính ổn định:** Để tránh ảnh hưởng từ các thay đổi của OSDCloud upstream, hãy sử dụng các module PowerShell đã được cung cấp trong thư mục `Misc/` của dự án.
 
 ---
 
@@ -152,12 +155,14 @@ Dism /Unmount-Wim /MountDir:"C:\Boot" /Commit
 - [ ] winpeshl.ini đã cấu hình
 - [ ] Unmount /commit thành công
 
-### Kiểm tra
-- [ ] USB đã tạo bằng Rufus
-- [ ] Boot thử thành công
-- [ ] CoreSystem khởi động đúng
+### Kiểm tra thành công (Validation)
+- [ ] **Kích thước ISO:** Đảm bảo file ISO sau khi build có kích thước khoảng ~1.3GB (± 50MB). Nếu nhỏ hơn đáng kể, quá trình build có thể bị lỗi.
+- [ ] **Boot thử:** Hãy boot thử vào máy ảo (Gen 2, hỗ trợ Secure Boot) trước khi mang ra máy vật lý để đảm bảo môi trường WinPE đã khởi động đúng.
 
 ---
+
+## Các chủ đề nâng cao
+- **[Advanced Topics](./advanced-topics.md)** - Hiểu sâu về kiến trúc hệ thống và tùy biến nâng cao.
 
 ## Hỏi đáp
 

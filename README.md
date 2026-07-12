@@ -8,6 +8,8 @@
 
 OSD Project by CoreSystem là hệ thống triển khai Windows tiên tiến, được xây dựng trên nền tảng OSDeploy/OSDCloud. Hệ thống giúp quá trình cài đặt Windows trở nên nhanh chóng, bảo mật và phù hợp cho môi trường doanh nghiệp.
 
+> **Lưu ý cho Doanh nghiệp:** Đây là dự án cộng đồng, được cung cấp theo nguyên trạng ("as-is"). Chúng tôi khuyến nghị kiểm thử kỹ lưỡng trong môi trường sandbox trước khi triển khai thực tế. Để đảm bảo tính ổn định tối đa trước các thay đổi từ OSDCloud gốc, vui lòng ưu tiên sử dụng các module đã được "đóng băng" (frozen) trong thư mục `Misc/`.
+
 ---
 
 ## Tiêu chí
@@ -35,10 +37,18 @@ OSD Project by CoreSystem là hệ thống triển khai Windows tiên tiến, đ
 
 Chọn phiên bản phù hợp với nhu cầu của bạn:
 
+```mermaid
+graph TD
+    A[Bạn chọn phiên bản nào?] --> B(Cần triển khai nhanh,<br>hiệu năng cao, ổn định)
+    A --> C(Cần hiểu sâu,<br>tùy biến code,<br>không ngại chậm)
+    B --> D[Phiên bản Binary]
+    C --> E[Phiên bản PowerShell]
+```
+
 | Phiên bản | Đối tượng | Mô tả |
 |-----------|-----------|-------|
-| **[Binary](./Getting-Started-Binary.md)** | Kỹ thuật viên IT | File self-contained (~128MB), triển khai nhanh |
-| **[PowerShell](./Getting-Started-PS.md)** | Đam mê IT | Mã nguồn mở, tùy chỉnh linh hoạt |
+| **[Binary](./Getting-Started-Binary.md)** | Kỹ thuật viên IT | C# WPF (.NET 10) - Tối ưu hiệu năng |
+| **[PowerShell](./Getting-Started-PS.md)** | Đam mê IT | Native PowerShell - Tùy biến tối đa |
 
 ---
 
