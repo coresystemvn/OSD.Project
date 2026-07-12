@@ -3,10 +3,9 @@
 <meta charset="utf-8"/><link rel="icon" href="src/favicon.png" sizes="any"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>OSD Project by CORESYSTEM</title>
 <meta content="Windows deployment, WinPE, OSDeploy, OSDCloud, enterprise imaging, secure boot, TPM 2.0, UEFI, Windows 11, IT automation, system deployment, disk imaging, free tools, open source" name="keywords"/>
 <meta content="Advanced Windows Deployment System - Fast, secure, and enterprise-ready Windows installation using WinPE with full SecureBoot and TPM 2.0 support" name="description"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script id="tailwind-config">
         try {
             tailwind.config = {
@@ -145,7 +144,7 @@
 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#pricing">Giải pháp</a>
 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#workflows">Quy trình</a>
 <a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#docs">Tài liệu</a>
-<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="https://github.com/coresystemvn/OSD.Project" target="_blank">GitHub</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="https://github.com/coresystemvn/OSD.Project" target="_blank" rel="noopener noreferrer">GitHub</a>
 </nav>
 </div>
 </header>
@@ -153,7 +152,7 @@
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center opacity-30 mix-blend-screen" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLvidNiAjubFjgIPSohIMM-FnA4rt4h3UmHb8QGnYLxtz3Hya8Kjo6BMLKBOMfeFUT-lGgFFBzRp3lMCLGA1ltaTmCTRPA8zTQ-nDG73zGz367-x4gt2MPSPE9lafevpCKC2ySwTHLPx4e7iWzgVxIQF8W1rwLfgRpmGUO-Em5ROwJGO0wzEy8KmcjCrm94Ab7Zk4gxvFjQhZSJiLWmQqgA63jSPwfmnH3PUQa1PL-Y4CEvRN9Hhq23TW6s')"></div>
+<div class="w-full h-full bg-cover bg-center opacity-10 mix-blend-screen" style="background-image: url('./src/0.webp')"></div>
 <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
 </div>
 <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
@@ -171,7 +170,7 @@
                 Nền tảng WinPE chuyên dụng được đúc kết từ kinh nghiệm vận hành hạ tầng IT quy mô lớn. Ổn định, an toàn và tối ưu tuyệt đối cho kỹ thuật viên chuyên nghiệp.
             </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-stack-md">
-<a class="bg-primary text-on-primary px-12 py-4 rounded-sm font-bold text-lg hover:brightness-110 active:scale-95 transition-all bloom-primary flex items-center gap-3" href="https://github.com/coresystemvn/OSD.Project" target="_blank">
+<a class="bg-primary text-on-primary px-12 py-4 rounded-sm font-bold text-lg hover:brightness-110 active:scale-95 transition-all bloom-primary flex items-center gap-3" href="https://github.com/coresystemvn/OSD.Project" target="_blank" rel="noopener noreferrer">
 <span class="material-symbols-outlined">code</span>
                     Xem trên GitHub
                 </a>
@@ -195,7 +194,9 @@
 <div class="flex h-full transition-transform duration-700 ease-in-out" id="media-slider">
 <!-- Slide 1: Demo clip -->
 <div class="w-full h-full shrink-0">
-<video controls> <source alt="Video Thumbnail" src="./src/vid.mp4"  type="video/mp4"></video>
+<video controls preload="metadata" class="w-full h-full object-cover">
+    <source src="./src/vid.mp4" type="video/mp4">
+</video>
 </div>
 <!-- Slide 2: Main windows -->
 <div class="w-full h-full shrink-0">
@@ -231,6 +232,7 @@
 <button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="2"></button>
 <button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="3"></button>
 <button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="4"></button>
+<button class="slider-dot w-3 h-1 bg-outline-variant/50 rounded-full transition-all" data-index="5"></button>
 </div>
 </div>
 </div>
@@ -310,7 +312,7 @@
                         </li>
 </ul>
 </div>
-<a href="https://github.com/coresystemvn/OSD.Project/releases" target="_blank">
+<a href="https://github.com/coresystemvn/OSD.Project/releases" target="_blank" rel="noopener noreferrer">
 <button class="w-full py-3 border border-primary/30 text-primary font-bold rounded-sm hover:bg-primary/10 transition-colors uppercase tracking-widest text-xs">Tải về ngay</button>
 </a>
 </div>
@@ -335,7 +337,7 @@
                         </li>
 </ul>
 </div>
-<a href="https://github.com/coresystemvn/OSD.Project" target="_blank">
+<a href="https://github.com/coresystemvn/OSD.Project" target="_blank" rel="noopener noreferrer">
 <button class="w-full py-3 bg-primary text-on-primary font-bold rounded-sm hover:brightness-110 transition-all uppercase tracking-widest text-xs">Khám phá GitHub</button>
 </a>
 </div>
@@ -566,22 +568,22 @@ Hệ thống sử dụng nền tảng ADK chính thống từ Microsoft đảm b
 <div class="flex gap-12">
 <div class="flex flex-col gap-3">
 <span class="text-white font-bold text-xs uppercase tracking-widest">Github</span>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSD.Project/releases" target="_blank">Release</a>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSD.Project" target="_blank">Repository</a>
+<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSD.Project/releases" target="_blank" rel="noopener noreferrer">Release</a>
+<a class="text-outline text-sm hover:text-primary transition-colors" href="https://github.com/coresystemvn/OSD.Project" target="_blank" rel="noopener noreferrer">Repository</a>
 </div>
 <div class="flex flex-col gap-3">
 <span class="text-white font-bold text-xs uppercase tracking-widest">Links</span>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://coresystem.vn" target="_blank">CoreSystem</a>
-<a class="text-outline text-sm hover:text-primary transition-colors" href="https://osdcloud.com" target="_blank">OSDCloud</a>
+<a class="text-outline text-sm hover:text-primary transition-colors" href="https://coresystem.vn" target="_blank" rel="noopener noreferrer">CoreSystem</a>
+<a class="text-outline text-sm hover:text-primary transition-colors" href="https://osdcloud.com" target="_blank" rel="noopener noreferrer">OSDCloud</a>
 </div>
 </div>
 </div>
 </footer>
 <div class="fixed bottom-24 right-8 z-50 flex flex-col gap-3">
-<a class="w-12 h-12 rounded-full bg-primary/10 backdrop-blur-md border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-lg bloom-primary" href="https://zalo.me/0775981868" target="_blank">
+<a class="w-12 h-12 rounded-full bg-primary/10 backdrop-blur-md border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all shadow-lg bloom-primary" href="https://zalo.me/0775981868" target="_blank" rel="noopener noreferrer">
 <span class="material-symbols-outlined">chat_bubble</span>
 </a>
-<a class="w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/30 flex items-center justify-center text-on-surface hover:border-primary transition-all shadow-lg" href="https://facebook.com/coresystemvn" target="_blank">
+<a class="w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/30 flex items-center justify-center text-on-surface hover:border-primary transition-all shadow-lg" href="https://facebook.com/coresystemvn" target="_blank" rel="noopener noreferrer" id="fb-link">
 <span class="material-symbols-outlined">thumb_up</span>
 </a>
 <a class="w-12 h-12 rounded-full bg-surface-container-high/80 backdrop-blur-md border border-outline-variant/30 flex items-center justify-center text-on-surface hover:border-primary transition-all shadow-lg" href="mailto:tructt@coresystem.vn">
@@ -687,5 +689,29 @@ Hệ thống sử dụng nền tảng ADK chính thống từ Microsoft đảm b
         section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
         observer.observe(section);
     });
+
+    // Facebook button
+
+    document.getElementById('fb-link').addEventListener('click', function(e) {
+
+    // Check mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        e.preventDefault();
+
+            const fbAppUrl = 'fb://profile/coresystemvn';
+            const fbWebUrl = this.href;
+
+            // Open FB app
+            window.location.href = fbAppUrl;
+
+            // Fall back to built in browser
+            setTimeout(function() {
+                window.open(fbWebUrl, '_blank', 'noopener,noreferrer');
+                }, 1500);
+            }
+    });
+
 </script>
 </body></html>
